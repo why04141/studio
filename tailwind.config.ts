@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['"Noto Sans TC"', 'sans-serif'],
+        headline: ['"Noto Sans TC"', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -64,6 +64,18 @@ export default {
           'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
+        },
+        breakfast: {
+          DEFAULT: 'hsl(var(--breakfast))',
+          foreground: 'hsl(var(--breakfast-foreground))',
+        },
+        lunch: {
+          DEFAULT: 'hsl(var(--lunch))',
+          foreground: 'hsl(var(--lunch-foreground))',
+        },
+        dinner: {
+          DEFAULT: 'hsl(var(--dinner))',
+          foreground: 'hsl(var(--dinner-foreground))',
         },
       },
       borderRadius: {
