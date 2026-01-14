@@ -33,5 +33,10 @@ export const restaurants: Restaurant[] = [
   { id: 19, name: "壽司郎", address: "111台北市士林區中正路187-189號", meals: ['lunch', 'dinner'], googleMapsQuery: "壽司郎 士林中正店" },
   { id: 20, name: "一蘭拉麵", address: "110台北市信義區松仁路97號", meals: ['lunch', 'dinner'], googleMapsQuery: "一蘭拉麵 台北本店" },
   { id: 21, name: "鬼金棒", address: "100台北市中正區汀州路三段87號", meals: ['lunch', 'dinner'], googleMapsQuery: "鬼金棒 台北總店" },
-  { id: 22, name: "爭鮮迴轉壽司", address: "251新北市淡水區中正路1號2樓", meals: ['lunch', 'dinner'], googleMapsQuery: "爭鮮迴轉壽司 淡水店" }
+  { id: 22, name: "爭鮮迴轉壽司", address: "251新北市淡水區中正路1號2樓", meals: ['lunch', 'dinner'], googleMapsQuery: "爭鮮迴轉壽司 淡水店" },
+
+  // More sushi places
+  { id: 23, name: "藏壽司", address: "251新北市淡水區中山北路二段383號2樓", meals: ['lunch', 'dinner'], googleMapsQuery: "藏壽司 淡水中山路店" },
+  { id: 24, name: "はま寿司 (Hama Sushi)", address: "10491台北市中山區中山北路二段32號", meals: ['lunch', 'dinner'], googleMapsQuery: "Hama Sushi 中山民權店" },
+  { id: 25, name: "合點壽司", address: "110台北市信義區忠孝東路五段8號B1", meals: ['lunch', 'dinner'], googleMapsQuery: "合點壽司 統一時代店" }
 ];
