@@ -57,7 +57,10 @@ jobs:
 
       - name: Build project
         run: npm run build
-        
+      
+      - name: Lint project
+        run: npm run lint
+
       - name: Deploy to Firebase App Hosting
         uses: firebase/actions/deploy-app-hosting@v1
         with:
