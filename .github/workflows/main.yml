@@ -27,13 +27,13 @@ jobs:
         run: npm run build
 
       - name: Lint project
-        run: npm run lint
+        run: eslint .
         
       - name: Type check
         run: npm run typecheck
       
       - name: Set up Firebase App Hosting
-        uses: firebase/actions/setup-app-hosting@v1
+        uses: firebase-actions/setup-app-hosting@v1
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           firebase_project_id: '${{ secrets.FIREBASE_PROJECT_ID }}'
@@ -59,10 +59,10 @@ jobs:
         run: npm run build
       
       - name: Lint project
-        run: npm run lint
+        run: eslint .
 
       - name: Deploy to Firebase App Hosting
-        uses: firebase/actions/deploy-app-hosting@v1
+        uses: firebase-actions/deploy-app-hosting@v1
         with:
           firebase_project_id: '${{ secrets.FIREBASE_PROJECT_ID }}'
           service_account: '${{ secrets.FIREBASE_APP_HOSTING_SERVICE_ACCOUNT }}'
