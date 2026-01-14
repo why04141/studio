@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['"Noto Sans TC"', 'sans-serif'],
-        headline: ['"Noto Sans TC"', 'sans-serif'],
+        headline: ['"Playfair Display"', 'serif'],
         code: ['monospace'],
       },
       colors: {

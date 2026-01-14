@@ -8,7 +8,7 @@ import { Dices, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface MealCardProps {
-  mealType: 'Breakfast' | 'Lunch' | 'Dinner';
+  mealType: string;
   restaurants: Restaurant[];
   icon: React.ReactNode;
   className?: string;
@@ -36,17 +36,17 @@ export function MealCard({ mealType, restaurants, icon, className, buttonClassNa
   };
 
   return (
-    <Card className={cn("w-full max-w-sm flex flex-col transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border-2", className)}>
+    <Card className={cn("w-full max-w-sm flex flex-col transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border-2 shadow-lg", className)}>
       <CardHeader className="flex-row items-center gap-4 space-y-0">
         <div className="p-3 rounded-lg bg-black/10">
           {icon}
         </div>
-        <CardTitle className="text-3xl font-bold">{mealType}</CardTitle>
+        <CardTitle className="text-2xl font-bold font-headline">{mealType}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow flex items-center justify-center min-h-[150px]">
         {recommendedRestaurant ? (
           <div className="text-center animate-in fade-in duration-500">
-            <p className="text-2xl font-semibold mb-2">{recommendedRestaurant.name}</p>
+            <p className="text-2xl font-semibold mb-2 font-headline">{recommendedRestaurant.name}</p>
             <a
               href={`${googleMapsBaseUrl}${encodeURIComponent(recommendedRestaurant.googleMapsQuery)}`}
               target="_blank"
@@ -54,17 +54,17 @@ export function MealCard({ mealType, restaurants, icon, className, buttonClassNa
               className="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100 transition-opacity"
             >
               <MapPin className="w-4 h-4" />
-              <span>{recommendedRestaurant.address}</span>
+              <span className="font-body">{recommendedRestaurant.address}</span>
             </a>
           </div>
         ) : (
-          <p className="opacity-80">點擊按鈕獲得推薦！</p>
+          <p className="opacity-80 font-body">Cliquez pour une recommandation!</p>
         )}
       </CardContent>
       <CardFooter>
-        <Button onClick={handleRecommend} className={cn("w-full text-lg py-6 font-bold", buttonClassName)}>
+        <Button onClick={handleRecommend} className={cn("w-full text-lg py-6 font-bold font-headline", buttonClassName)}>
           <Dices className="mr-2 h-6 w-6" />
-          推薦一家
+          Recommander
         </Button>
       </CardFooter>
     </Card>
